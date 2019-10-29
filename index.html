@@ -149,13 +149,11 @@ input[type=radio] {
                 <div class="btn-group" style="margin-top: 8px;margin-right:10px;">
                 </div>
                 <a class="navbar-brand" href="#">
-					Experiments with jquery
+					Experimental Mapping using JQuery
                 </a>
             </div>
             <ul class="nav navbar-nav">
-				<li id="fieldLinker" class="active"><a href="#fieldLinker">Field Linker</a></li>
-                <li id="blog"><a href="https://philippemarcmeyer.github.io#jquery">Github Blog</a></li>
-                <li id="repos"><a href="https://github.com/PhilippeMarcMeyer/FieldsLinker">Github repos</a></li>
+				<li id="fieldLinker" class="active"><a href="#fieldLinker">PIM Mapper</a></li>
             </ul>
         </div>
     </nav>
@@ -163,21 +161,7 @@ input[type=radio] {
   
 	  
  <div id="fieldLinkerZone" style="max-width:800px;width:800px;" >
-	  <h5 style="display:inline-block">FieldsLinker</h5>&nbsp;v0.85 Touch screen friendly (Beta)
-	  <p>Allows to link elements of list A to elements of list B and returns the links in a js object</p>
-	  <ul class="presentation">
-	  <li>The elements of a list are sortable by drag and drop for a better lisibility</li>
-	  <li>Colours can be re-defined and links come in 2 flavours</li>
-		<ol>
-			<li>Straight lines</li>
-			<li>Lines with squares at the ends</li>
-		</ol>
-	  <li>You may input somme links from a previous session</li>
-	  <li>Mandatory fields (optional array)</li>
-	  <li>Works in Chrome, Chromium, Opera, Firefox and IE (9+)</li>
-	  <li>Result in an object with error true/false plus an array of links</li>
-	  <li><b>Actions are </b>: init, eraseLinks, getLinks, changeParameters, disable, enable</li>
-	   </ul>
+	  <h5 style="display:inline-block">PIM Mapper POC</h5>&nbsp;(Alpha Release 0.0.1)
 	    <hr/>	
 		<div class="row" >
 			<div>
@@ -236,35 +220,36 @@ input[type=radio] {
 				},
 					"Lists":[
 						{
-							"name":"Columns in files",
+							"name":"PIM Elements",
 							"list" : [
-								"firstName",
-								"lastName",
-								"phone",
-								"email",
-								"role",
-								"Birthday",
-								"Adress",
-								"Sales",
-								"City"
+								{PresentationName: "Main Product Category ID", DataType: "String", Length: "30", FieldName: "table.dbo.prod_name"},
+								"Product Description",
+								"Product SKU",
+								"Retail Price",
+								"Weight",
+								"Sold As Package",
+								"Meta Product Tag 1",
+								"Meta Product Tag 2",
+								"Full Description"
 							]
 						},
 						{
-							"name":"Available Fields",
+							"name":"Magento Product",
 							"list" : [
-								"Company",
-								"jobTitle",
-								"adress",	
-								"adress",
-								"adress",								
-								"first_name",
-								"last_name",
-								"email_adress",
-								"Phone number"
+								"Category ID",
+								"Max Price",
+								"Name",	
+								"Selling Price",
+								"SKU",								
+								"Weight",
+								"Length",
+								"Height",
+								"Package Type"
 							],
 							"mandatories" :[
-								"last_name",
-								"email_adress"
+								"SKU",
+								"Name",
+								"Selling Price"
 							]
 						}
 						],
